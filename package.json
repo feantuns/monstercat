@@ -1,0 +1,16 @@
+{
+  "name": "monstercat",
+  "version": "1.0.0",
+  "description": "Monstercat Frontend Practice Challenge",
+  "homepage": "https://feantuns.github.io/monstercat/",
+  "main": "index.html",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
+  },
+  "author": "Felipe Antunes",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.4",
+    "tailwindcss": "^4.0.4"
+  }
+}

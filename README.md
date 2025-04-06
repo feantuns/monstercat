@@ -25,9 +25,9 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
 ## Plano
 
+- [ ] Inicializar projeto
 - [ ] Encontrar fonte
 - [ ] Encontrar imagens
-- [ ] Inicializar projeto
 - [ ] Título e meta tags
 - [ ] Background image + fade effect
 - [ ] header + fixed sidebar

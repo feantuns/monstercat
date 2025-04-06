@@ -25,4 +25,20 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
 ## Plano
 
+- [ ] Encontrar fonte
+- [ ] Encontrar imagens
+- [ ] Inicializar projeto
+- [ ] Título e meta tags
+- [ ] Background image + fade effect
+- [ ] header + fixed sidebar
+- [ ] Expanded sidebar
+- [ ] Hero
+- [ ] Botão de play
+- [ ] Botão de compartilhar
+- [ ] Lista de músicas
+- [ ] Music video
+- [ ] Footer
+- [ ] Loading inicial
+- [ ] Garantir responsividade
+
 ## Lições aprendidas

@@ -35,9 +35,11 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
   ](https://stackoverflow.com/questions/2570972/css-font-border)possíveis fontes:
 
   [https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F\*
-  ]()
+  ](https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F*)
+
   [https://fonts.google.com/specimen/Train+One?categoryFilters=Appearance:%2FTheme%2FTechno;Feeling:%2FExpressive%2FInnovative
-  ]()
+  ](https://fonts.google.com/specimen/Train+One?categoryFilters=Appearance:%2FTheme%2FTechno;Feeling:%2FExpressive%2FInnovative)
+
   ainda falta achar uma para o corpo
 
   com a ajuda do chat gpt descobrimos que é possível deixar a fonte transparente com borda:

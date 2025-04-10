@@ -32,7 +32,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   [https://stackoverflow.com/questions/2570972/css-font-border
 
-  ](https://stackoverflow.com/questions/2570972/css-font-border)possíveis fontes:
+  ]()possíveis fontes:
 
   [https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F\*
   ](https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F*)
@@ -50,6 +50,8 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
   color: transparent;
   -webkit-text-stroke: 2px #212121;
   ```
+
+  Decided font: [Kanit](https://fonts.google.com/specimen/Kanit?preview.text=TRACK%20LIST&categoryFilters=Appearance:%2FTheme%2FTechno)
 
 - [ ] Encontrar imagens
 - [ ] Título e meta tags

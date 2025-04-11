@@ -57,6 +57,8 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Pesquisando libs para ícones, dei uma olhada na Font Awesome mas estou achando muito complexo a configuração/uso.
 
+  Usar a lib react-icons, pois ela contém os ícones de todas as outras praticamente, inclusive o próprio Font Awesome.
+
 - [ ] Título e meta tags
 - [ ] Background image + fade effect
 - [ ] header + fixed sidebar

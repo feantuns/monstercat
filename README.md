@@ -26,7 +26,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 ## Plano
 
 - [x] Inicializar projeto
-- [ ] Encontrar fonte
+- [x] Encontrar fonte
 
   Pesquisando fontes, achei algumas interessantes, estou tentando achar uma que fica como a LEVEL DAYS, com borda, mas acabei de pensar em formas de atingir isso com css:
 
@@ -54,6 +54,9 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
   Decided font: [Kanit](https://fonts.google.com/specimen/Kanit?preview.text=TRACK%20LIST&categoryFilters=Appearance:%2FTheme%2FTechno)
 
 - [ ] Encontrar imagens
+
+  Pesquisando libs para ícones, dei uma olhada na Font Awesome mas estou achando muito complexo a configuração/uso.
+
 - [ ] Título e meta tags
 - [ ] Background image + fade effect
 - [ ] header + fixed sidebar

@@ -57,7 +57,9 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Pesquisando libs para ícones, dei uma olhada na Font Awesome mas estou achando muito complexo a configuração/uso.
 
-  Usar a lib react-icons, pois ela contém os ícones de todas as outras praticamente, inclusive o próprio Font Awesome.
+  Usar a lib react-icons, pois ela contém os ícones de todas as outras praticamente, inclusive o próprio Font Awesome
+
+  Verificar se conseguimos pegar o álbum pela api do spotify
 
 - [ ] Título e meta tags
 - [ ] Background image + fade effect

@@ -61,6 +61,10 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Verificar se conseguimos pegar o álbum pela api do spotify
 
+  Chose the album from spotify: 6MEv8dNtVbKDW1WG4Hk6WZ, HomeSick by A Day To Remember
+
+  Going to useg getStaticProps to run the spotify api fetch on build time, so that the spotify credentials don't get present in client-side code.
+
 - [ ] Título e meta tags
 - [ ] Background image + fade effect
 - [ ] header + fixed sidebar

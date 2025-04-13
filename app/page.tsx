@@ -20,8 +20,21 @@ export default function Page() {
       const data = await res.json();
 
       console.log("Access Token", data);
-    };
 
+      fetch("https://api.spotify.com/v1/albums/6MEv8dNtVbKDW1WG4Hk6WZ", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${data.access_token}`,
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Album Info:", data);
+        })
+        .catch(error => {
+          console.error("Error fetching artist:", error);
+        });
+    };
     fetchAlbum();
   }, []);
 

@@ -21,7 +21,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /out # Upload the root directory (where index.html is)
+          path: ./out # Upload the root directory (where index.html is)
 
       - name: Deploy to GitHub Pages
         id: deployment

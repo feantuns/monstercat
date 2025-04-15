@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FaBeer } from "react-icons/fa";
 
 export const getStaticProps = async context => {
@@ -30,12 +31,24 @@ export const getStaticProps = async context => {
   return { props: { album } };
 };
 
-export default function Page({ album }) {
+export default function Home({ album }) {
   console.log(album);
 
   return (
-    <h1>
-      {album.name} <FaBeer />
-    </h1>
+    <>
+      <Head>
+        <title>{album.name} - Monstercat</title>
+        <meta name="description" content="Monstercat album page clone." />
+        <meta property="og:title" content={`${album.name} - Monstercat`} />
+        <meta
+          property="og:description"
+          content="Monstercat album page clone."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <h1>
+        {album.name} <FaBeer />
+      </h1>
+    </>
   );
 }

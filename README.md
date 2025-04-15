@@ -53,7 +53,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Decided font: [Kanit](https://fonts.google.com/specimen/Kanit?preview.text=TRACK%20LIST&categoryFilters=Appearance:%2FTheme%2FTechno)
 
-- [ ] Encontrar imagens
+- [x] Encontrar imagens
 
   Pesquisando libs para ícones, dei uma olhada na Font Awesome mas estou achando muito complexo a configuração/uso.
 
@@ -63,11 +63,12 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Chose the album from spotify: 6MEv8dNtVbKDW1WG4Hk6WZ, HomeSick by A Day To Remember
 
-  Going to useg getStaticProps to run the spotify api fetch on build time, so that the spotify credentials don't get present in client-side code.
+  Going to use getStaticProps to run the spotify api fetch on build time, so that the spotify credentials don't get present in client-side code.
 
-- [ ] Título e meta tags
+- [x] Título e meta tags
 - [ ] Background image + fade effect
 - [ ] header + fixed sidebar
+- [ ] Favicon
 - [ ] Expanded sidebar
 - [ ] Hero
 - [ ] Botão de play

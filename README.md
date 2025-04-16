@@ -30,9 +30,9 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Pesquisando fontes, achei algumas interessantes, estou tentando achar uma que fica como a LEVEL DAYS, com borda, mas acabei de pensar em formas de atingir isso com css:
 
-  [https://stackoverflow.com/questions/2570972/css-font-border
+  [https://stackoverflow.com/questions/2570972/css-font-border]()
 
-  ]()possíveis fontes:
+  possíveis fontes:
 
   [https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F\*
   ](https://fonts.google.com/specimen/Tourney?categoryFilters=Appearance:%2FTheme%2FTechno;Sans+Serif:%2FSans%2F*)
@@ -67,6 +67,14 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
 - [x] Título e meta tags
 - [ ] Background image + fade effect
+      Percebi que tem um efeito de textura no fundo da página, não é só a cor preta comum.
+
+  Pesquisando como reproduzir descobri que há formas de criar textura com css usando background-image e gradient:
+
+  [https://projects.verou.me/css3patterns/#]()
+
+  Mas talvez o melhor seja repetir uma imagem.
+
 - [ ] header + fixed sidebar
 - [ ] Favicon
 - [ ] Expanded sidebar

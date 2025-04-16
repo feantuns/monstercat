@@ -67,7 +67,8 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
 - [x] Título e meta tags
 - [ ] Background image + fade effect
-      Percebi que tem um efeito de textura no fundo da página, não é só a cor preta comum.
+
+  Percebi que tem um efeito de textura no fundo da página, não é só a cor preta comum.
 
   Pesquisando como reproduzir descobri que há formas de criar textura com css usando background-image e gradient:
 

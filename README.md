@@ -76,6 +76,8 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Mas talvez o melhor seja repetir uma imagem.
 
+  Verificado que o site oficial do Monstercat faz isso, repete uma imagem para dar o efeito de textura.
+
 - [ ] header + fixed sidebar
 - [ ] Favicon
 - [ ] Expanded sidebar

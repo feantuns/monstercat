@@ -78,6 +78,8 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Verificado que o site oficial do Monstercat faz isso, repete uma imagem para dar o efeito de textura.
 
+  Pesquisando como estilizar body no next.
+
 - [ ] header + fixed sidebar
 - [ ] Favicon
 - [ ] Expanded sidebar

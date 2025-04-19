@@ -9,8 +9,8 @@ export const getStaticProps = async context => {
     },
     body: new URLSearchParams({
       grant_type: "client_credentials",
-      client_id: process.env.SPOTIFY_CLIENT_ID,
-      client_secret: process.env.SPOTIFY_CLIENT_SECRET,
+      client_id: process.env.SPOTIFY_CLIENT_ID || "",
+      client_secret: process.env.SPOTIFY_CLIENT_SECRET || "",
     }),
   });
 
@@ -37,7 +37,7 @@ export default function Home({ album }) {
   return (
     <>
       <Head>
-        <title>{album.name} - Monstercat</title>
+        <title>{`${album.name} - Monstercat`}</title>
         <meta name="description" content="Monstercat album page clone." />
         <meta property="og:title" content={`${album.name} - Monstercat`} />
         <meta

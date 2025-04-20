@@ -1,6 +1,15 @@
-@import "tailwindcss/preflight";
 @tailwind utilities;
+@import "tailwindcss/index";
+@import "tailwindcss/theme";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
-body {
-  color: red;
+@layer base {
+  body {
+    color: #f1f1f1;
+    background-image: url(https://cdn.monstercat.com/background-tile.webp);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    overflow-x: hidden;
+  }
 }

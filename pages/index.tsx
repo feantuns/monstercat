@@ -46,7 +46,7 @@ export default function Home({ album }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <h1>
+      <h1 className="text-3xl font-bold underline">
         {album.name} <FaBeer />
       </h1>
     </>

@@ -1,8 +1,4 @@
-@tailwind utilities;
-@import "tailwindcss/index";
-@import "tailwindcss/theme";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
 @layer base {
   body {
@@ -10,6 +6,7 @@
     background-image: url(https://cdn.monstercat.com/background-tile.webp);
     background-repeat: repeat;
     background-attachment: scroll;
+    background-color: var(--color-black);
     overflow-x: hidden;
   }
 }

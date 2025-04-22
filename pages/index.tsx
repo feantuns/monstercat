@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { FaBeer } from "react-icons/fa";
 
 export const getStaticProps = async context => {
   const resToken = await fetch("https://accounts.spotify.com/api/token", {
@@ -46,9 +45,17 @@ export default function Home({ album }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <h1 className="text-3xl font-bold underline">
-        {album.name} <FaBeer />
-      </h1>
+      <div className="relative h-screen">
+        <div
+          className={`absolute inset-0 bg-[url('${album.images[0].url}')] bg-cover bg-center blur-sm z-0`}
+        ></div>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white z-10"></div>
+
+        <div className="relative z-20 flex items-center justify-center h-full">
+          <h1 className="text-4xl font-bold text-white">Welcome</h1>
+        </div>
+      </div>
     </>
   );
 }

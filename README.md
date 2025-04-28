@@ -66,7 +66,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
   Going to use getStaticProps to run the spotify api fetch on build time, so that the spotify credentials don't get present in client-side code.
 
 - [x] Título e meta tags
-- [ ] Background image + fade effect
+- [x] Background image + fade effect
 
   Percebi que tem um efeito de textura no fundo da página, não é só a cor preta comum.
 

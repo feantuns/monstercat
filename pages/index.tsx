@@ -55,7 +55,7 @@ export default function Home({ album }) {
         ></div>
 
         {/* gradient */}
-        <div className="absolute mb-[-10px] inset-0 bg-gradient-to-b from-transparent to-[#121011] to-85% z-1"></div>
+        <div className="absolute mb-[-10px] inset-0 bg-gradient-to-b from-transparent to-[#121011] to-98% z-1"></div>
 
         {/* content */}
         <div className="relative z-2">

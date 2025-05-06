@@ -80,7 +80,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 
   Pesquisando como estilizar body no next.
 
-- [ ] header + fixed sidebar
+- [x] header + fixed sidebar
 - [ ] Favicon
 - [ ] Expanded sidebar
 - [ ] Hero

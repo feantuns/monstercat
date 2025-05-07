@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export const getStaticProps = async context => {
   const resToken = await fetch("https://accounts.spotify.com/api/token", {
@@ -61,6 +62,7 @@ export default function Home({ album }) {
         {/* content */}
         <div className="relative z-2">
           <Header />
+          <Hero album={album} />
         </div>
       </div>
     </>

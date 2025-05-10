@@ -5,7 +5,7 @@ const Hero = ({ album }) => {
         <img src={album.images[0].url} alt={album.name} className="w-[30vw]" />
       </div>
       <div>
-        <h1 className="text-4xl uppercase relative font-black text-transparent text-stroke-white">
+        <h1 className="text-4xl uppercase relative font-black text-transparent text-stroke-white tracking-[4px]">
           {album.name}{" "}
           <span
             className="absolute left-0 pointer-events-none text-stroke-0"

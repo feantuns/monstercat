@@ -5,7 +5,7 @@ const Hero = ({ album }) => {
         <img src={album.images[0].url} alt={album.name} className="w-[30vw]" />
       </div>
       <div>
-        <h1 className="text-4xl uppercase relative font-black text-transparent text-stroke-white tracking-[4px]">
+        <h1 className="text-4xl uppercase relative font-semibold text-transparent text-stroke-white tracking-[4px]">
           {album.name}{" "}
           <span
             className="absolute left-0 pointer-events-none text-stroke-0"
@@ -14,7 +14,9 @@ const Hero = ({ album }) => {
             {album.name}
           </span>
         </h1>
-        <h2>{album.artists[0].name}</h2>
+        <h2 className="text-2xl uppercase font-semibold text-white mt-2">
+          {album.artists[0].name}
+        </h2>
       </div>
     </div>
   );

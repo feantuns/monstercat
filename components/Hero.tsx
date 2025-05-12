@@ -1,8 +1,16 @@
 const Hero = ({ album }) => {
+  const date = new Date(album.release_date);
+
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const formattedDate = date.toLocaleDateString("en-US", options as any);
+
   return (
     <div className="h-[90vh] flex items-center justify-center gap-10">
-      <div>
-        <img src={album.images[0].url} alt={album.name} className="w-[30vw]" />
+      <div className="relative pl-5 w-[30vw]">
+        <span className="absolute rotate-270 left-0 top-[55%] translate-[-50%] text-[1rem] text-white font-normal">
+          {album.label} -- Released {formattedDate}
+        </span>
+        <img src={album.images[0].url} alt={album.name} className="w-full" />
       </div>
       <div>
         <h1 className="text-4xl uppercase relative font-semibold text-transparent text-stroke-white tracking-[4px]">

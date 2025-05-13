@@ -29,6 +29,8 @@ export const getStaticProps = async context => {
 
   const album = await resAlbum.json();
 
+  album.color = "rgb(154, 143, 246)";
+
   return { props: { album } };
 };
 

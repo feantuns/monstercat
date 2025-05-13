@@ -8,7 +8,8 @@ const Hero = ({ album }) => {
     <div className="h-[90vh] flex items-center justify-center gap-10">
       <div className="relative pl-5 w-[30vw]">
         <span className="absolute rotate-270 left-0 top-[55%] translate-[-50%] text-[1rem] text-white font-normal">
-          {album.label} -- Released {formattedDate}
+          <span style={{ color: album.color }}>{album.label}</span> -- Released{" "}
+          {formattedDate}
         </span>
         <img src={album.images[0].url} alt={album.name} className="w-full" />
       </div>

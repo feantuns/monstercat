@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Hero = ({ album }) => {
   const date = new Date(album.release_date);
 
@@ -26,6 +28,10 @@ const Hero = ({ album }) => {
         <h2 className="text-3xl uppercase font-medium text-white mt-1">
           {album.artists[0].name}
         </h2>
+        <div>
+          <Button color={album.color}>LISTEN NOW</Button>
+          <Button variant="outlined">SHARE</Button>
+        </div>
       </div>
     </div>
   );

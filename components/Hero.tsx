@@ -1,3 +1,4 @@
+import { PiPlayLight, PiShareNetworkLight } from "react-icons/pi";
 import Button from "./Button";
 
 const Hero = ({ album }) => {
@@ -29,8 +30,14 @@ const Hero = ({ album }) => {
           {album.artists[0].name}
         </h2>
         <div className="flex gap-2 mt-10">
-          <Button color={album.color}>LISTEN NOW</Button>
-          <Button variant="outlined">SHARE</Button>
+          <Button color={album.color}>
+            <PiPlayLight fontSize="16px" />
+            LISTEN NOW
+          </Button>
+          <Button variant="outlined">
+            <PiShareNetworkLight fontSize="16px" />
+            SHARE
+          </Button>
         </div>
       </div>
     </div>

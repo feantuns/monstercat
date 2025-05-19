@@ -15,7 +15,7 @@ const Button = ({
   return (
     <button
       style={{ "--bg": color } as any}
-      className={`${buttonStyles[variant]} cursor-pointer px-8 py-2 text-xl font-normal transition-all duration-200 hover:bg-white hover:text-black focus:outline-none flex items-center gap-2`}
+      className={`${buttonStyles[variant]} cursor-pointer pl-7 pr-8 py-2 text-xl font-normal transition-all duration-200 hover:bg-white hover:text-black focus:outline-none flex items-center justify-center gap-2 tracking-[1px]`}
     >
       {children}
     </button>

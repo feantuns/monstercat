@@ -29,7 +29,7 @@ const Hero = ({ album }) => {
         <h2 className="text-3xl uppercase font-medium text-white mt-1">
           {album.artists[0].name}
         </h2>
-        <div className="flex gap-2 mt-10">
+        <div className="flex gap-2 mt-12">
           <Button color={album.color}>
             <PiPlayLight fontSize="16px" />
             LISTEN NOW

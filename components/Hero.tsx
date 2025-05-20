@@ -8,9 +8,12 @@ const Hero = ({ album }) => {
   const formattedDate = date.toLocaleDateString("en-US", options as any);
 
   return (
-    <div className="h-[90vh] flex items-center justify-center gap-10">
-      <div className="relative pl-5 w-[clamp(350px,30vw,500px)]">
-        <span className="absolute rotate-270 left-0 top-[52%] translate-[-50%] text-[1rem] text-white font-light italic">
+    <div className="h-[90vh] flex items-center justify-center gap-12">
+      <div className="flex items-stretch gap-2 w-[clamp(350px,30vw,500px)]">
+        <span
+          className="text-[1rem] text-white font-light italic"
+          style={{ writingMode: "sideways-lr" }}
+        >
           <span style={{ color: album.color }}>{album.label}</span> &mdash;
           Released {formattedDate}
         </span>

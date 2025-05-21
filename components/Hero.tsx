@@ -9,7 +9,7 @@ const Hero = ({ album }) => {
 
   return (
     <div className="h-[90vh] flex items-center justify-center gap-12">
-      <div className="flex items-stretch gap-2 w-[clamp(350px,30vw,500px)]">
+      <div className="flex gap-2">
         <span
           className="text-[1rem] text-white font-light italic"
           style={{ writingMode: "sideways-lr" }}
@@ -17,7 +17,11 @@ const Hero = ({ album }) => {
           <span style={{ color: album.color }}>{album.label}</span> &mdash;
           Released {formattedDate}
         </span>
-        <img src={album.images[0].url} alt={album.name} className="w-full" />
+        <img
+          src={album.images[0].url}
+          alt={album.name}
+          className="w-[clamp(350px,30vw,500px)]"
+        />
       </div>
       <div>
         <h1 className="text-4xl uppercase relative font-semibold text-transparent text-stroke-white tracking-[4px]">

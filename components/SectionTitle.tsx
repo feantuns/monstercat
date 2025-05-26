@@ -1,7 +1,12 @@
+import clsx from "clsx";
+
 const SectionTitle = props => (
   <h3
-    className="text-5xl text-white uppercase font-medium tracking-[2px]"
     {...props}
+    className={clsx(
+      "text-5xl text-white uppercase font-medium tracking-[2px]",
+      props.className
+    )}
   />
 );
 

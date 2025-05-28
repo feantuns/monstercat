@@ -1,3 +1,10 @@
+import { FaSpotify } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaSoundcloud } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaBandcamp } from "react-icons/fa";
+import { FaCirclePlay } from "react-icons/fa6";
+
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 
@@ -7,24 +14,34 @@ const StreamList = ({ children }) => {
 
 const streams = [
   {
-    title: "Spotify",
-    url: "https://open.spotify.com",
-    color: "#1DB954",
+    title: "Monstercat Player",
+    url: "#",
+    icon: <FaCirclePlay />,
+  },
+  {
+    title: "Bandcamp",
+    url: "https://bandcamp.com",
+    icon: <FaBandcamp />,
+  },
+  {
+    title: "SoundCloud",
+    url: "https://soundcloud.com",
+    icon: <FaSoundcloud />,
   },
   {
     title: "Apple Music",
     url: "https://music.apple.com",
-    color: "#FA2D2D",
+    icon: <FaApple />,
   },
   {
-    title: "YouTube Music",
+    title: "YouTube",
     url: "https://music.youtube.com",
-    color: "#FF0000",
+    icon: <FaYoutube />,
   },
   {
-    title: "Amazon Music",
-    url: "https://music.amazon.com",
-    color: "#FF9900",
+    title: "Spotify",
+    url: "https://open.spotify.com",
+    icon: <FaSpotify />,
   },
 ];
 
@@ -40,7 +57,6 @@ const StreamItYourWay = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-              style={{ color: stream.color }}
             >
               <span className="text-xl font-semibold">{stream.title}</span>
             </a>

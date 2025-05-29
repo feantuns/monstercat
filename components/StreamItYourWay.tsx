@@ -9,7 +9,7 @@ import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 
 const StreamList = ({ children }) => {
-  return <ul>{children}</ul>;
+  return <ul className="flex">{children}</ul>;
 };
 
 const streams = [
@@ -52,13 +52,8 @@ const StreamItYourWay = () => {
       <StreamList>
         {streams.map((stream, index) => (
           <li key={index} className="mb-4">
-            <a
-              href={stream.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              <span className="text-xl font-semibold">{stream.title}</span>
+            <a href={stream.url} target="_blank" rel="noopener noreferrer">
+              <span className="text-xl font-semibold">{stream.icon}</span>
             </a>
           </li>
         ))}

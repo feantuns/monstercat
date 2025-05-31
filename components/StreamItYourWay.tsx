@@ -14,7 +14,7 @@ const StreamList = ({ children }) => {
 
 const StreamListItem = ({ children }) => {
   return (
-    <li className="flex items-center justify-center w-16 h-16 border-white border-1 not-last:border-r-0 ">
+    <li className="flex items-center justify-center min-w-16 h-16 border-white border-1 not-last:border-r-0 ">
       {children}
     </li>
   );
@@ -24,7 +24,12 @@ const streams = [
   {
     title: "Monstercat Player",
     url: "#",
-    icon: <FaCirclePlay />,
+    icon: (
+      <div className="flex gap-2 items-center px-4 uppercase tracking-widest">
+        <FaCirclePlay />
+        <span>Player</span>
+      </div>
+    ),
   },
   {
     title: "Bandcamp",
@@ -61,7 +66,7 @@ const StreamItYourWay = () => {
         {streams.map((stream, index) => (
           <StreamListItem key={index}>
             <a href={stream.url} target="_blank" rel="noopener noreferrer">
-              <span className="text-xl font-semibold">{stream.icon}</span>
+              <span className="font-semibold">{stream.icon}</span>
             </a>
           </StreamListItem>
         ))}

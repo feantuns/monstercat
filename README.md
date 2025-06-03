@@ -81,7 +81,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
   Pesquisando como estilizar body no next.
 
 - [x] header + fixed sidebar
-- [ ] Favicon
+- [x] Favicon
 - [ ] Expanded sidebar
 - [ ] Hero
 - [ ] Botão de play
@@ -93,3 +93,7 @@ E o primeiro passo de tudo é definir o problema que temos que resolver.
 - [ ] Garantir responsividade
 
 ## Lições aprendidas
+
+Como criar tooltip com api nativa do browser.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Popover_API

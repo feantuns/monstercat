@@ -1,3 +1,4 @@
+"use client";
 import { FaSpotify } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { FaSoundcloud } from "react-icons/fa";
@@ -7,6 +8,7 @@ import { FaCirclePlay } from "react-icons/fa6";
 
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
+import { useEffect } from "react";
 
 const StreamList = ({ children }) => {
   return <ul className="flex mt-8">{children}</ul>;
@@ -59,22 +61,54 @@ const streams = [
 ];
 
 const StreamItYourWay = () => {
+  useEffect(() => {
+    const tooltips = document.querySelectorAll(".tooltip");
+    const btns = document.querySelectorAll(".button-tooltip");
+
+    function addEventListeners(i) {
+      btns[i].addEventListener("mouseover", () => {
+        (tooltips[i] as any).showPopover({ source: btns[i] });
+      });
+
+      btns[i].addEventListener("mouseout", () => {
+        (tooltips[i] as any).hidePopover();
+      });
+
+      btns[i].addEventListener("focus", () => {
+        (tooltips[i] as any).showPopover({ source: btns[i] });
+      });
+
+      btns[i].addEventListener("blur", () => {
+        (tooltips[i] as any).hidePopover();
+      });
+    }
+
+    for (let i = 0; i < btns.length; i++) {
+      addEventListeners(i);
+    }
+  }, []);
   return (
     <Container>
       <SectionTitle>Stream it your way</SectionTitle>
       <StreamList>
         {streams.map((stream, index) => (
           <StreamListItem key={index}>
-            <a
-              href={stream.url}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              //   href={stream.url}
+              //   target="_blank"
+              //   rel="noopener noreferrer"
               popoverTarget={`${stream.title}-popover`}
+              popoverTargetAction="toggle"
+              className="button-tooltip"
             >
               <span className="font-semibold">{stream.icon}</span>
-            </a>
-            <div id={`${stream.title}-popover`} popover="auto">
-              Popover content
+            </button>
+            <div
+              id={`${stream.title}-popover`}
+              popover={"hint" as any}
+              className="tooltip text-black text-2xl"
+            >
+              {stream.title}
             </div>
           </StreamListItem>
         ))}

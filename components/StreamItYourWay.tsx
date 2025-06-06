@@ -99,7 +99,7 @@ const StreamItYourWay = () => {
               //   rel="noopener noreferrer"
               popoverTarget={`${stream.title}-popover`}
               popoverTargetAction="toggle"
-              className="button-tooltip"
+              className="button-tooltip cursor-pointer"
             >
               <span className="font-semibold">{stream.icon}</span>
             </button>

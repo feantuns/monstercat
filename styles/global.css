@@ -23,7 +23,7 @@
 [popover="hint"] {
   inset: unset;
   position: absolute;
-  top: calc(anchor(bottom) + 5px);
+  bottom: calc(anchor(top) + 8px);
   justify-self: anchor-center;
   margin: 0;
 

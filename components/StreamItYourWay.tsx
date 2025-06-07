@@ -106,9 +106,9 @@ const StreamItYourWay = () => {
             <div
               id={`${stream.title}-popover`}
               popover={"hint" as any}
-              className="tooltip text-black text-2xl"
+              className="tooltip"
             >
-              {stream.title}
+              STREAM ON {stream.title}
             </div>
           </StreamListItem>
         ))}

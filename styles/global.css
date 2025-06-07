@@ -22,15 +22,31 @@
 
 [popover="hint"] {
   inset: unset;
-  position: absolute;
-  bottom: calc(anchor(top) + 8px);
+  position: relative;
+  bottom: calc(anchor(top) + 16px);
   justify-self: anchor-center;
   margin: 0;
 
-  padding: 8px;
-  border-radius: 6px;
-  background: #271717;
-  color: whitesmoke;
-  box-shadow: 1px 1px 3px #999;
-  border: none;
+  padding: 2px 6px;
+  background: #fff;
+  color: #212121;
+  border: 1px solid #212121;
+  overflow: visible;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+[popover="hint"]::after {
+  content: "";
+  position: absolute;
+  bottom: -28%; /* just below the popover */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  background: #fff;
+  border: 1px solid #212121;
+  border-top: none;
+
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
 }

@@ -93,16 +93,16 @@ const StreamItYourWay = () => {
       <StreamList>
         {streams.map((stream, index) => (
           <StreamListItem key={index}>
-            <button
-              //   href={stream.url}
-              //   target="_blank"
-              //   rel="noopener noreferrer"
+            <a
+              href={stream.url}
+              target="_blank"
+              rel="noopener noreferrer"
               popoverTarget={`${stream.title}-popover`}
               popoverTargetAction="toggle"
               className="button-tooltip cursor-pointer"
             >
               <span className="font-semibold">{stream.icon}</span>
-            </button>
+            </a>
             <div
               id={`${stream.title}-popover`}
               popover={"hint" as any}

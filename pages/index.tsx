@@ -1,4 +1,5 @@
 import Head from "next/head";
+import spotifyPreviewFinder from "spotify-preview-finder";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import StreamItYourWay from "../components/StreamItYourWay";
@@ -30,6 +31,13 @@ export const getStaticProps = async context => {
   );
 
   const album = await resAlbum.json();
+
+  for (let i = 0; i < album.tracks.items.length; i++) {
+    const item = album.tracks.items[i];
+    const result = await spotifyPreviewFinder(item.name, 1);
+
+    album.tracks.items[i].preview = result;
+  }
 
   album.color = "#9A8FF6";
 

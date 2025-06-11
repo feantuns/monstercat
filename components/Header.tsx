@@ -10,7 +10,7 @@ import { PiPlayCircleFill } from "react-icons/pi";
 
 const Header = () => {
   return (
-    <div className="w-full fixed top-0 left-0">
+    <div className="w-full fixed top-0 left-0 z-0">
       <div className="px-[32px] pt-6 flex items-start w-full max-w-[1260px] mx-auto justify-between">
         <div className="p-4 bg-black">
           <a href="#">

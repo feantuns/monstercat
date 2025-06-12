@@ -46,7 +46,6 @@ export const getStaticProps = async context => {
 
 export default function Home({ album }) {
   console.log(album);
-  console.log(album.images[0].url);
 
   return (
     <>
@@ -76,7 +75,7 @@ export default function Home({ album }) {
           <Header />
           <Hero album={album} />
           <StreamItYourWay />
-          <TrackList />
+          <TrackList album={album} />
         </div>
       </div>
     </>

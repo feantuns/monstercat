@@ -15,12 +15,14 @@ const TrackList = ({ album }) => {
 export default TrackList;
 
 const Track = ({ track }) => {
+  console.log({ track });
   return (
-    <div className="flex items-center justify-between py-2 border-b border-gray-700">
-      <div className="flex items-center">
-        <span className="text-white">{track.name}</span>
+    <div className="flex items-center justify-between py-4 text-white">
+      <div className="flex items-center gap-4">
+        <span>{track.track_number}</span>
+        <span>{track.name}</span>
       </div>
-      <span className="text-gray-400">{track.duration_ms}</span>
+      <span>{track.duration_ms}</span>
     </div>
   );
 };

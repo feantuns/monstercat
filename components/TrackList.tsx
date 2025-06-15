@@ -1,4 +1,4 @@
-import { PiPlayLight } from "react-icons/pi";
+import { PiPlayLight, PiShareNetworkLight } from "react-icons/pi";
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 import { msToMinutesSeconds } from "../utils/time";
@@ -20,7 +20,7 @@ const Track = ({ track }) => {
   console.log({ track });
   const artists = track.artists.map(artist => artist.name).join(", ");
   return (
-    <div className="flex items-center justify-between py-4 text-white text-xl">
+    <div className="flex items-center justify-between py-4 antialiased text-white text-xl">
       <div className="flex items-center gap-6">
         <span className="font-extralight">{track.track_number}</span>
         <PiPlayLight className="ml-1 cursor-pointer" fontSize="20px" />
@@ -29,10 +29,11 @@ const Track = ({ track }) => {
           <p className="text-base font-light">{artists}</p>
         </div>
       </div>
-      <div>
+      <div className="flex items-center gap-8">
         <span className="font-extralight tabular-nums">
           {msToMinutesSeconds(track.duration_ms)}
         </span>
+        <PiShareNetworkLight className="ml-1 cursor-pointer" fontSize="20px" />
       </div>
     </div>
   );

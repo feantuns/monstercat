@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import StreamItYourWay from "../components/StreamItYourWay";
 import TrackList from "../components/TrackList";
+import MusicVideo from "../components/MusicVideo";
 
 export const getStaticProps = async context => {
   const resToken = await fetch("https://accounts.spotify.com/api/token", {
@@ -76,6 +77,7 @@ export default function Home({ album }) {
           <Hero album={album} />
           <StreamItYourWay />
           <TrackList album={album} />
+          <MusicVideo />
         </div>
       </div>
     </>

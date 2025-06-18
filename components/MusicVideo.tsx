@@ -7,7 +7,7 @@ const MusicVideo = () => {
       <SectionTitle className="mt-8 mb-8">Music video</SectionTitle>
       <iframe
         width="100%"
-        height="500"
+        className="h-[280px] md:h-[400px] lg:h-[500px]"
         src="https://www.youtube.com/embed/MrY-XZ45Rfk?si=xgCx4_tTRPyVxhDD"
         title="YouTube video player"
         frameBorder="0"

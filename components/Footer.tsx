@@ -1,5 +1,5 @@
 import Container from "./Container";
-import SectionTitle from "./SectionTitle";
+import LinkTitle from "./LinkTitle";
 
 const Footer = () => {
   return (
@@ -7,21 +7,18 @@ const Footer = () => {
       <Container>
         <div className="py-10 border-t-1 border-b-1 border-white flex gap-x-6 flex-wrap">
           <div className="flex-1">
-            <a href="#">
-              <SectionTitle>About Monstercat</SectionTitle>
-            </a>
-            <a href="#">
-              <SectionTitle>Contact us</SectionTitle>
-            </a>
-            <a href="#">
-              <SectionTitle>Carreers</SectionTitle>
-            </a>
-            <a href="#">
-              <SectionTitle>News</SectionTitle>
-            </a>
-            <a href="#">
-              <SectionTitle>Press</SectionTitle>
-            </a>
+            <LinkTitle href="#">About Monstercat</LinkTitle>
+            <LinkTitle href="#">Contact us</LinkTitle>
+            <LinkTitle href="#">Carreers</LinkTitle>
+            <LinkTitle href="#">News</LinkTitle>
+            <LinkTitle href="#">Press</LinkTitle>
+          </div>
+          <div className="flex-1">
+            <LinkTitle href="#">Terms of service</LinkTitle>
+            <LinkTitle href="#">Privacy policy</LinkTitle>
+          </div>
+          <div className="flex-1">
+            <LinkTitle>Monstercat News</LinkTitle>
           </div>
         </div>
       </Container>

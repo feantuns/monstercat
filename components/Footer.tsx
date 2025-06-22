@@ -18,7 +18,12 @@ const Footer = () => {
             <LinkTitle href="#">Privacy policy</LinkTitle>
           </div>
           <div className="flex-1">
-            <LinkTitle>Monstercat News</LinkTitle>
+            <LinkTitle className="text-stone-500" style={{ color: "#79716b" }}>
+              Monstercat News
+            </LinkTitle>
+            <p className="italic font-thin text-xl mt-2">
+              Don't miss a thing, stay up to date with the latest news from us.
+            </p>
           </div>
         </div>
       </Container>

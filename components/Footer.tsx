@@ -1,3 +1,7 @@
+import { FaArrowRightLong } from "react-icons/fa6";
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+
+import Button from "./Button";
 import Container from "./Container";
 import LinkTitle from "./LinkTitle";
 
@@ -21,9 +25,10 @@ const Footer = () => {
             <LinkTitle className="text-stone-500" style={{ color: "#79716b" }}>
               Monstercat News
             </LinkTitle>
-            <p className="italic font-thin text-xl mt-2">
+            <p className="italic font-thin text-xl my-2">
               Don't miss a thing, stay up to date with the latest news from us.
             </p>
+            <EmailField />
           </div>
         </div>
       </Container>
@@ -32,3 +37,21 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const EmailField = () => {
+  return (
+    <div className="relative">
+      <input
+        type="email"
+        placeholder="Enter email"
+        className="w-full p-3 text-lg font-thin tracking-widest outline-none border-1 border-transparent border-b-stone-500"
+      />
+      <Button
+        variant="text"
+        style={{ position: "absolute", right: 0, top: 8, padding: "8px 20px" }}
+      >
+        <LiaLongArrowAltRightSolid />
+      </Button>
+    </div>
+  );
+};

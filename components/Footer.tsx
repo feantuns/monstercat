@@ -25,7 +25,7 @@ const Footer = () => {
             <LinkTitle className="text-stone-500" style={{ color: "#79716b" }}>
               Monstercat News
             </LinkTitle>
-            <p className="italic font-thin text-xl my-2">
+            <p className="italic font-extralight text-lg my-2">
               Don't miss a thing, stay up to date with the latest news from us.
             </p>
             <EmailField />
@@ -44,7 +44,7 @@ const EmailField = () => {
       <input
         type="email"
         placeholder="Enter email"
-        className="w-full p-3 text-lg font-thin tracking-widest outline-none border-1 border-transparent border-b-stone-500"
+        className="w-full p-3 text-lg font-thin tracking-widest outline-none border-[0.5px] border-transparent border-b-stone-500"
       />
       <Button
         variant="text"

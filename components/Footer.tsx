@@ -1,4 +1,10 @@
-import { FaArrowRightLong } from "react-icons/fa6";
+import { PiInstagramLogo } from "react-icons/pi";
+import { FaTiktok } from "react-icons/fa";
+import { PiXLogoLight } from "react-icons/pi";
+import { PiTwitchLogoBold } from "react-icons/pi";
+import { FaFacebook } from "react-icons/fa";
+import { IoLogoDiscord } from "react-icons/io5";
+import { PiPlayCircleFill } from "react-icons/pi";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 import Button from "./Button";
@@ -7,9 +13,9 @@ import LinkTitle from "./LinkTitle";
 
 const Footer = () => {
   return (
-    <footer className="py-20">
+    <footer className="pb-20 pt-30">
       <Container>
-        <div className="py-10 border-t-1 border-b-1 border-white flex gap-x-6 flex-wrap">
+        <div className="py-12 border-t-1 border-b-1 border-white flex gap-x-6 flex-wrap">
           <div className="flex-1">
             <LinkTitle href="#">About Monstercat</LinkTitle>
             <LinkTitle href="#">Contact us</LinkTitle>
@@ -31,6 +37,44 @@ const Footer = () => {
             <EmailField />
           </div>
         </div>
+
+        <div className="flex justify-between gap-2 pt-8">
+          <p className="italic font-extralight text-lg my-2">
+            2011 - 2025 © Monstercat, All Rights Reserved
+          </p>
+
+          <div className="flex gap-5 justify-center items-center">
+            <a href="#">
+              <PiInstagramLogo className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <FaTiktok className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <PiXLogoLight className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <PiTwitchLogoBold className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <FaFacebook className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <IoLogoDiscord className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <PiPlayCircleFill className="text-[1.2rem]" />
+            </a>
+          </div>
+        </div>
+
+        <p className="font-thin text-sm mt-16 mb-4 text-center">
+          {`We acknowledge with gratitude the traditional, ancestral and unceded land of the Coast Salish peoples, including the territories of the Sḵwx̱wú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil-Waututh) and xʷməθkʷəy̓əm (Musqueam) Nations, on which Monstercat's Vancouver HQ stands.`}
+        </p>
+
+        <p className="font-thin text-sm text-center">
+          {`We acknowledge the unceded and ancestral territories of the Gabrielino/Tongva peoples on which our LA team live and work.`}
+        </p>
       </Container>
     </footer>
   );

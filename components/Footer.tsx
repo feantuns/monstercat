@@ -6,6 +6,9 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoDiscord } from "react-icons/io5";
 import { PiPlayCircleFill } from "react-icons/pi";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import { FaYoutube } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
 
 import Button from "./Button";
 import Container from "./Container";
@@ -45,6 +48,9 @@ const Footer = () => {
 
           <div className="flex gap-5 justify-center items-center">
             <a href="#">
+              <FaYoutube className="text-[1.2rem]" />
+            </a>
+            <a href="#">
               <PiInstagramLogo className="text-[1.2rem]" />
             </a>
             <a href="#">
@@ -52,6 +58,12 @@ const Footer = () => {
             </a>
             <a href="#">
               <PiXLogoLight className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <FaSpotify className="text-[1.2rem]" />
+            </a>
+            <a href="#">
+              <FaApple className="text-[1.2rem]" />
             </a>
             <a href="#">
               <PiTwitchLogoBold className="text-[1.2rem]" />

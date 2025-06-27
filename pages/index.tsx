@@ -1,11 +1,6 @@
 import Head from "next/head";
 import spotifyPreviewFinder from "spotify-preview-finder";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import StreamItYourWay from "../components/StreamItYourWay";
-import TrackList from "../components/TrackList";
-import MusicVideo from "../components/MusicVideo";
-import Footer from "../components/Footer";
+import Content from "../components/Content";
 
 export const getStaticProps = async context => {
   const resToken = await fetch("https://accounts.spotify.com/api/token", {
@@ -73,14 +68,7 @@ export default function Home({ album }) {
         <div className="absolute mb-[-10px] inset-0 bg-gradient-to-b from-transparent to-[#121011] to-98% z-1"></div>
 
         {/* content */}
-        <div className="relative z-2">
-          <Header />
-          <Hero album={album} />
-          <StreamItYourWay />
-          <TrackList album={album} />
-          <MusicVideo />
-          <Footer />
-        </div>
+        <Content album={album} />
       </div>
     </>
   );

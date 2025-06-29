@@ -1,12 +1,28 @@
 import { PiPlayLight, PiShareNetworkLight } from "react-icons/pi";
 import Button from "./Button";
 import Container from "./Container";
+import { useAudio } from "../hooks/useAudio";
 
-const Hero = ({ album }) => {
+const Hero = ({
+  album,
+  audioHook,
+}: {
+  album: any;
+  audioHook: ReturnType<typeof useAudio>;
+}) => {
   const date = new Date(album.release_date);
 
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = date.toLocaleDateString("en-US", options as any);
+
+  const firstTrack = album?.tracks?.items?.[0];
+
+  const handleClickPlay = () => {
+    if (audioHook.playingTrack?.id === firstTrack?.id) {
+      audioHook.stopTrack();
+    }
+    audioHook.playTrack(firstTrack);
+  };
 
   return (
     <Container>
@@ -39,7 +55,7 @@ const Hero = ({ album }) => {
             {album.artists[0].name}
           </h2>
           <div className="flex gap-2 mt-12">
-            <Button color={album.color}>
+            <Button color={album.color} onClick={handleClickPlay}>
               <PiPlayLight fontSize="16px" />
               LISTEN NOW
             </Button>

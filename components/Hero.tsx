@@ -20,6 +20,7 @@ const Hero = ({
   const handleClickPlay = () => {
     if (audioHook.playingTrack?.id === firstTrack?.id) {
       audioHook.stopTrack();
+      return;
     }
     audioHook.playTrack(firstTrack);
   };

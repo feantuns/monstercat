@@ -11,19 +11,24 @@ export function useAudio() {
     ) as HTMLAudioElement;
 
     if (!audioTag) {
+      setLoadingTrack(true);
       audioTag = document.createElement("audio");
       audioTag.src = track?.preview?.results?.[0]?.previewUrls?.[0];
-      setLoadingTrack(true);
-      audioTag.onload = () => {
-        setLoadingTrack(false);
-      };
+      audioTag.onload = () => {};
+      audioTag.addEventListener("canplay", () => {
+        setTimeout(() => {
+          setLoadingTrack(false);
+          audioTag.play();
+          setPlayingTrack(track);
+        }, 2000);
+      });
+      audioTag.addEventListener("error", () => setLoadingTrack(false));
       audioTag.id = `audio-player-${track.id}`;
-      audioTag.onerror = () => setLoadingTrack(false);
       document.body.appendChild(audioTag);
+    } else {
+      audioTag.play();
+      setPlayingTrack(track);
     }
-
-    audioTag.play();
-    setPlayingTrack(track);
   };
 
   const stopTrack = () => {

@@ -1,7 +1,9 @@
-import { PiPlayLight, PiShareNetworkLight } from "react-icons/pi";
+import { PiPlayLight, PiPauseLight, PiShareNetworkLight } from "react-icons/pi";
+
 import Button from "./Button";
 import Container from "./Container";
 import { useAudio } from "../hooks/useAudio";
+import PlayPauseIcon from "./PlayPauseIcon";
 
 const Hero = ({
   album,
@@ -17,8 +19,10 @@ const Hero = ({
 
   const firstTrack = album?.tracks?.items?.[0];
 
+  const isPlaying = audioHook.playingTrack?.id === firstTrack?.id;
+
   const handleClickPlay = () => {
-    if (audioHook.playingTrack?.id === firstTrack?.id) {
+    if (isPlaying) {
       audioHook.stopTrack();
       return;
     }
@@ -57,7 +61,10 @@ const Hero = ({
           </h2>
           <div className="flex gap-2 mt-12">
             <Button color={album.color} onClick={handleClickPlay}>
-              <PiPlayLight fontSize="16px" />
+              <PlayPauseIcon
+                isPlaying={isPlaying}
+                isLoading={audioHook.loadingTrack}
+              />
               LISTEN NOW
             </Button>
             <Button variant="outlined">

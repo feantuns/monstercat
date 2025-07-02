@@ -11,6 +11,7 @@ export function useAudio() {
     ) as HTMLAudioElement;
 
     if (!audioTag) {
+      setPlayingTrack(track);
       setLoadingTrack(true);
       audioTag = document.createElement("audio");
       audioTag.src = track?.preview?.results?.[0]?.previewUrls?.[0];
@@ -19,7 +20,6 @@ export function useAudio() {
         setTimeout(() => {
           setLoadingTrack(false);
           audioTag.play();
-          setPlayingTrack(track);
         }, 2000);
       });
       audioTag.addEventListener("error", () => setLoadingTrack(false));
@@ -40,5 +40,14 @@ export function useAudio() {
       setPlayingTrack(null);
     }
   };
-  return { playingTrack, playTrack, stopTrack, loadingTrack };
+
+  const handleClickPlay = ({ track, isPlaying }) => {
+    if (isPlaying) {
+      stopTrack();
+      return;
+    }
+    playTrack(track);
+  };
+
+  return { playingTrack, playTrack, stopTrack, loadingTrack, handleClickPlay };
 }

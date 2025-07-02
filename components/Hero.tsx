@@ -21,14 +21,6 @@ const Hero = ({
 
   const isPlaying = audioHook.playingTrack?.id === firstTrack?.id;
 
-  const handleClickPlay = () => {
-    if (isPlaying) {
-      audioHook.stopTrack();
-      return;
-    }
-    audioHook.playTrack(firstTrack);
-  };
-
   return (
     <Container>
       <div className="h-[90vh] flex items-center gap-12 pt-24">
@@ -60,7 +52,12 @@ const Hero = ({
             {album.artists[0].name}
           </h2>
           <div className="flex gap-2 mt-12">
-            <Button color={album.color} onClick={handleClickPlay}>
+            <Button
+              color={album.color}
+              onClick={() =>
+                audioHook.handleClickPlay({ track: firstTrack, isPlaying })
+              }
+            >
               <PlayPauseIcon
                 isPlaying={isPlaying}
                 isLoading={audioHook.loadingTrack}

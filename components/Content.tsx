@@ -14,7 +14,7 @@ const Content = ({ album }) => {
       <Header />
       <Hero album={album} audioHook={audioHook} />
       <StreamItYourWay />
-      <TrackList album={album} />
+      <TrackList album={album} audioHook={audioHook} />
       <MusicVideo />
       <Footer />
     </div>

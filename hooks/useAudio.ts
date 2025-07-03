@@ -5,10 +5,20 @@ export function useAudio() {
   const [playingTrack, setPlayingTrack] = useState<any>();
   const [loadingTrack, setLoadingTrack] = useState(false);
 
+  const getCurrentAudioTag = () =>
+    document.getElementById(
+      `audio-player-${playingTrack?.id}`
+    ) as HTMLAudioElement;
+
   const playTrack = (track: any) => {
     let audioTag = document.getElementById(
       `audio-player-${track?.id}`
     ) as HTMLAudioElement;
+
+    if (playingTrack) {
+      getCurrentAudioTag()?.pause();
+      setPlayingTrack(null);
+    }
 
     if (!audioTag) {
       setPlayingTrack(track);
@@ -32,9 +42,7 @@ export function useAudio() {
   };
 
   const stopTrack = () => {
-    const audioTag = document.getElementById(
-      `audio-player-${playingTrack?.id}`
-    ) as HTMLAudioElement;
+    const audioTag = getCurrentAudioTag();
     if (audioTag) {
       audioTag.pause();
       setPlayingTrack(null);

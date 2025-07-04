@@ -4,6 +4,13 @@ import SectionTitle from "./SectionTitle";
 import { msToMinutesSeconds } from "../utils/time";
 import { useAudio } from "../hooks/useAudio";
 import PlayPauseIcon from "./PlayPauseIcon";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-roboto",
+});
 
 const TrackList = ({
   album,
@@ -42,9 +49,17 @@ const Track = ({ track, isPlaying, isLoading, handleClickPlay }) => {
   return (
     <div className="flex items-center justify-between py-4 antialiased text-white text-xl">
       <div className="flex items-center gap-6">
-        <span className="font-extralight">{track.track_number}</span>
+        <span
+          className={`${roboto.className} text-base font-light tabular-nums inline-block min-w-[18px]`}
+        >
+          {track.track_number}
+        </span>
         <span className="ml-1 cursor-pointer" onClick={handleClickPlay}>
-          <PlayPauseIcon isPlaying={isPlaying} isLoading={isLoading} />
+          <PlayPauseIcon
+            fontSize="inherit"
+            isPlaying={isPlaying}
+            isLoading={isLoading}
+          />
         </span>
 
         <div>
@@ -53,7 +68,9 @@ const Track = ({ track, isPlaying, isLoading, handleClickPlay }) => {
         </div>
       </div>
       <div className="flex items-center gap-8">
-        <span className="font-extralight tabular-nums">
+        <span
+          className={`${roboto.className} text-base font-light tabular-nums`}
+        >
           {msToMinutesSeconds(track.duration_ms)}
         </span>
         <PiShareNetworkLight className="ml-1 cursor-pointer" fontSize="20px" />

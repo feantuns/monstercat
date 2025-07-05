@@ -4,6 +4,7 @@ import Button from "./Button";
 import Container from "./Container";
 import { useAudio } from "../hooks/useAudio";
 import PlayPauseIcon from "./PlayPauseIcon";
+import { share } from "../utils/share";
 
 const Hero = ({
   album,
@@ -64,7 +65,12 @@ const Hero = ({
               />
               LISTEN NOW
             </Button>
-            <Button variant="outlined">
+            <Button
+              variant="outlined"
+              onClick={() =>
+                share({ title: album.name, url: album.external_urls.spotify })
+              }
+            >
               <PiShareNetworkLight fontSize="16px" />
               SHARE
             </Button>

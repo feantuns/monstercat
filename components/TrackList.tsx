@@ -5,6 +5,7 @@ import { msToMinutesSeconds } from "../utils/time";
 import { useAudio } from "../hooks/useAudio";
 import PlayPauseIcon from "./PlayPauseIcon";
 import { Roboto } from "next/font/google";
+import { share } from "../utils/share";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -33,6 +34,9 @@ const TrackList = ({
             handleClickPlay={() =>
               audioHook.handleClickPlay({ track: item, isPlaying })
             }
+            handleClickShare={() =>
+              share({ title: album.name, url: item.external_urls.spotify })
+            }
             isLoading={isLoading}
             isPlaying={isPlaying}
           />
@@ -44,13 +48,19 @@ const TrackList = ({
 
 export default TrackList;
 
-const Track = ({ track, isPlaying, isLoading, handleClickPlay }) => {
+const Track = ({
+  track,
+  isPlaying,
+  isLoading,
+  handleClickPlay,
+  handleClickShare,
+}) => {
   const artists = track.artists.map(artist => artist.name).join(", ");
   return (
     <div className="flex items-center justify-between py-4 antialiased text-white text-xl">
       <div className="flex items-center gap-6">
         <span
-          className={`${roboto.className} text-base font-light tabular-nums inline-block min-w-[18px]`}
+          className={`${roboto.className} text-lg font-light tabular-nums inline-block min-w-[18px]`}
         >
           {track.track_number}
         </span>
@@ -68,12 +78,14 @@ const Track = ({ track, isPlaying, isLoading, handleClickPlay }) => {
         </div>
       </div>
       <div className="flex items-center gap-8">
-        <span
-          className={`${roboto.className} text-base font-light tabular-nums`}
-        >
+        <span className={`${roboto.className} text-lg font-light tabular-nums`}>
           {msToMinutesSeconds(track.duration_ms)}
         </span>
-        <PiShareNetworkLight className="ml-1 cursor-pointer" fontSize="20px" />
+        <PiShareNetworkLight
+          className="ml-1 cursor-pointer"
+          fontSize="20px"
+          onClick={handleClickShare}
+        />
       </div>
     </div>
   );

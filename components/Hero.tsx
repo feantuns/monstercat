@@ -24,7 +24,7 @@ const Hero = ({
 
   return (
     <Container>
-      <div className="h-[90vh] flex items-center gap-12 pt-24">
+      <div className="lg:h-[90vh] px-[8vw] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
         <div className="flex gap-2">
           <span
             className="text-[1rem] text-white font-light italic"
@@ -36,7 +36,7 @@ const Hero = ({
           <img
             src={album.images[0].url}
             alt={album.name}
-            className="w-[clamp(350px,30vw,500px)]"
+            className="w-full lg:w-[clamp(350px,30vw,500px)]"
           />
         </div>
         <div>

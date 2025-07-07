@@ -24,8 +24,8 @@ const Hero = ({
 
   return (
     <Container>
-      <div className="lg:h-[90vh] px-[8vw] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
-        <div className="flex gap-2">
+      <div className="lg:h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
+        <div className="w-[calc(100% - 24px)] lg:w-full flex gap-2">
           <span
             className="text-[1rem] text-white font-light italic"
             style={{ writingMode: "sideways-lr" }}

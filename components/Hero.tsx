@@ -5,6 +5,7 @@ import Container from "./Container";
 import { useAudio } from "../hooks/useAudio";
 import PlayPauseIcon from "./PlayPauseIcon";
 import { share } from "../utils/share";
+import clsx from "clsx";
 
 const Hero = ({
   album,
@@ -24,18 +25,14 @@ const Hero = ({
 
   return (
     <Container>
-      <div className="lg:h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
-        <div
-          className="lg:w-auto flex gap-2"
-          style={{ width: "calc(100% - 24px)" }}
-        >
-          <span
-            className="text-[1rem] text-white font-light italic"
-            style={{ writingMode: "sideways-lr" }}
-          >
-            <span style={{ color: album.color }}>{album.label}</span> &mdash;
-            Released {formattedDate}
-          </span>
+      <div className="min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
+        <div className="flex-col-reverse  md:flex-row lg:w-auto flex gap-2">
+          <div className="hidden md:flex">
+            <ReleaseDate album={album} formattedDate={formattedDate} sideways />
+          </div>
+          <div className="flex md:hidden mt-9 mb-[-20px]">
+            <ReleaseDate album={album} formattedDate={formattedDate} />
+          </div>
           <img
             src={album.images[0].url}
             alt={album.name}
@@ -85,3 +82,19 @@ const Hero = ({
 };
 
 export default Hero;
+
+const ReleaseDate = ({ album, sideways = false, formattedDate }) => (
+  <span
+    className={clsx(
+      "text-white font-light italic",
+      sideways ? "text-[1rem]" : "text-[1.2rem]"
+    )}
+    style={{ writingMode: sideways ? "sideways-lr" : undefined }}
+  >
+    <span style={{ color: album.color }}>{album.label}</span>
+    <span className={clsx(sideways ? {} : "font-thin")}>
+      {" "}
+      &mdash; Released {formattedDate}
+    </span>
+  </span>
+);

@@ -25,7 +25,7 @@ const Hero = ({
 
   return (
     <Container>
-      <div className="min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-24 pb-24 lg:pb-0">
+      <div className="min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-25 pb-24 lg:pb-0">
         <div className="flex-col-reverse  md:flex-row lg:w-auto flex gap-2">
           <div className="hidden md:flex">
             <ReleaseDate album={album} formattedDate={formattedDate} sideways />
@@ -40,7 +40,7 @@ const Hero = ({
           />
         </div>
         <div>
-          <h1 className="text-4xl uppercase relative font-semibold text-transparent text-stroke-white tracking-[4px]">
+          <h1 className="text-3xl md:text-4xl uppercase relative font-medium md:font-semibold text-white md:text-transparent md:text-stroke-white tracking-[4px]">
             {album.name}{" "}
             <span
               className="absolute left-0 pointer-events-none text-stroke-0"
@@ -49,10 +49,10 @@ const Hero = ({
               {album.name}
             </span>
           </h1>
-          <h2 className="text-3xl uppercase font-medium text-white mt-1">
+          <h2 className="text-2xl md:text-3xl uppercase font-normal md:font-medium text-white mt-1">
             {album.artists[0].name}
           </h2>
-          <div className="flex gap-2 mt-12">
+          <div className="flex gap-2 mt-6 md:mt-12">
             <Button
               color={album.color}
               onClick={() =>
@@ -87,7 +87,7 @@ const ReleaseDate = ({ album, sideways = false, formattedDate }) => (
   <span
     className={clsx(
       "text-white font-light italic",
-      sideways ? "text-[1rem]" : "text-[1.2rem]"
+      sideways ? "text-base" : "text-base sm:text-[1.2rem]"
     )}
     style={{ writingMode: sideways ? "sideways-lr" : undefined }}
   >

@@ -26,15 +26,15 @@ const Footer = () => {
             <LinkTitle href="#">News</LinkTitle>
             <LinkTitle href="#">Press</LinkTitle>
           </div>
-          <div className="flex-1">
+          <div className="md:flex-1">
             <LinkTitle href="#">Terms of service</LinkTitle>
             <LinkTitle href="#">Privacy policy</LinkTitle>
           </div>
-          <div className="flex-1">
+          <div className="mt-10 md:mt-0 flex-1">
             <LinkTitle className="text-stone-500" style={{ color: "#79716b" }}>
               Monstercat News
             </LinkTitle>
-            <p className="italic font-extralight text-lg my-2">
+            <p className="italic font-extralight text-base md:text-lg my-2">
               Don't miss a thing, stay up to date with the latest news from us.
             </p>
             <EmailField />
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between flex-wrap gap-2 pt-8">
-          <p className="italic font-extralight text-lg my-2">
+          <p className="italic font-extralight text-base md:text-lg my-2">
             2011 - 2025 © Monstercat, All Rights Reserved
           </p>
 

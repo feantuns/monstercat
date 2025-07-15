@@ -33,6 +33,7 @@ export function useAudio() {
         }, 2000);
       });
       audioTag.addEventListener("error", () => setLoadingTrack(false));
+      audioTag.addEventListener("ended", () => setPlayingTrack(null));
       audioTag.id = `audio-player-${track.id}`;
       document.body.appendChild(audioTag);
     } else {

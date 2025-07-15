@@ -4,7 +4,7 @@ const SectionTitle = props => (
   <h3
     {...props}
     className={clsx(
-      "text-5xl text-white uppercase font-medium tracking-[2px]",
+      "text-3xl md:text-5xl text-white uppercase font-medium tracking-[2px]",
       props.className
     )}
   />

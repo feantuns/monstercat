@@ -16,7 +16,7 @@ const StreamList = ({ children }) => {
 
 const StreamListItem = ({ children }) => {
   return (
-    <li className="flex items-center justify-center min-w-16 h-16 border-white border-1 not-last:border-r-0 ">
+    <li className="flex items-center justify-center min-w-11 h-11 md:min-w-16 md:h-16 border-white border-1 not-last:border-r-0 ">
       {children}
     </li>
   );

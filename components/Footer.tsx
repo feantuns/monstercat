@@ -41,12 +41,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-between gap-2 pt-8">
+        <div className="flex justify-between flex-wrap gap-2 pt-8">
           <p className="italic font-extralight text-lg my-2">
             2011 - 2025 © Monstercat, All Rights Reserved
           </p>
 
-          <div className="flex gap-5 justify-center items-center">
+          <div className="flex flex-wrap gap-5 items-center">
             <a href="#">
               <FaYoutube className="text-[1.2rem]" />
             </a>

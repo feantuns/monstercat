@@ -58,9 +58,9 @@ const Track = ({
   const artists = track.artists.map(artist => artist.name).join(", ");
   return (
     <div className="flex items-center justify-between py-4 antialiased text-white text-xl">
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4 md:gap-6">
         <span
-          className={`${roboto.className} text-lg font-light tabular-nums inline-block min-w-[18px]`}
+          className={`${roboto.className} text-base md:text-lg font-light tabular-nums inline-block min-w-[12px] md:min-w-[18px]`}
         >
           {track.track_number}
         </span>
@@ -73,12 +73,14 @@ const Track = ({
         </span>
 
         <div>
-          <p>{track.name}</p>
-          <p className="text-base font-light">{artists}</p>
+          <p className="text-base md:text-lg">{track.name}</p>
+          <p className="text-sm md:text-base font-light">{artists}</p>
         </div>
       </div>
-      <div className="flex items-center gap-8">
-        <span className={`${roboto.className} text-lg font-light tabular-nums`}>
+      <div className="flex items-center gap-0 md:gap-8">
+        <span
+          className={`${roboto.className} text-base md:text-lg font-light tabular-nums`}
+        >
           {msToMinutesSeconds(track.duration_ms)}
         </span>
         <PiShareNetworkLight

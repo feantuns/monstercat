@@ -55,7 +55,7 @@ export default function Home({ album }) {
           content="Monstercat album page clone."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg" href="/favicon.svg" />
+        <link rel="icon" type="image/svg" href="/monstercat/favicon.svg" />
       </Head>
       <div className="relative h-screen">
         {/* bg image */}

@@ -40,7 +40,7 @@ const Hero = ({
           />
         </div>
         <div>
-          <h1 className="text-3xl md:text-4xl uppercase relative font-medium md:font-semibold text-white md:text-transparent md:text-stroke-white tracking-[4px]">
+          <h1 className="text-3xl md:text-4xl uppercase relative font-medium md:font-semibold text-white md:text-transparent text-stroke-white tracking-[4px]">
             {album.name}{" "}
             <span
               className="absolute left-0 pointer-events-none text-stroke-0"

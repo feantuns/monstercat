@@ -7,10 +7,11 @@ import { PiTwitchLogoBold } from "react-icons/pi";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoDiscord } from "react-icons/io5";
 import { PiPlayCircleFill } from "react-icons/pi";
+import SideMenu from "./SideMenu";
 
 const Header = () => {
   return (
-    <div className="w-full fixed top-0 left-0 z-3 lg:z-0">
+    <div className="w-full fixed top-0 left-0 z-3 lg:z-2">
       <div className="hidden lg:block">
         <DesktopHeader />
       </div>
@@ -32,7 +33,7 @@ const DesktopHeader = () => (
     </div>
 
     <div className="flex flex-col gap-14 items-end">
-      <AiOutlineMenu className="text-2xl mt-4 cursor-pointer" />
+      <SideMenu style={{ marginTop: "1rem" }} />
 
       <div className="flex flex-col gap-5 justify-center items-center">
         <SocialIcons />
@@ -53,7 +54,7 @@ const MobileHeader = () => (
       <SocialIcons />
     </div>
 
-    <AiOutlineMenu className="text-2xl cursor-pointer relative z-1" />
+    <SideMenu />
 
     <div className="backdrop-blur-[8px] bg-black/38 absolute top-0 left-0 right-0 w-full h-full z-0"></div>
   </div>

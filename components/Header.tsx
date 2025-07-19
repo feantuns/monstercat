@@ -1,5 +1,4 @@
 import { PiCat } from "react-icons/pi";
-import { AiOutlineMenu } from "react-icons/ai";
 import { PiInstagramLogo } from "react-icons/pi";
 import { FaTiktok } from "react-icons/fa";
 import { PiXLogoLight } from "react-icons/pi";

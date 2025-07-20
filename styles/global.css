@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-lg: 74.0625rem; /* 1185px / 16 = 74.0625rem */
+}
+
 @layer base {
   body {
     color: #f1f1f1;

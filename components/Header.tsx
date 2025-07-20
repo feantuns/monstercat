@@ -10,7 +10,7 @@ import SideMenu from "./SideMenu";
 
 const Header = () => {
   return (
-    <div className="w-full fixed top-0 left-0 z-3 lg:z-2">
+    <div className="w-full fixed top-0 left-0 z-3 lg:z-1">
       <div className="hidden lg:block">
         <DesktopHeader />
       </div>

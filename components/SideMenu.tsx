@@ -18,7 +18,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
   return (
     <div
       className={clsx(
-        "fixed p-5 bg-black top-0 right-0 h-full w-[450px] max-w-full transform transition-transform duration-300 z-40",
+        "fixed p-8 bg-black top-0 right-0 h-full w-[430px] max-w-full transform transition-transform duration-300 z-40",
         open ? "translate-x-0" : "translate-x-full"
       )}
     >
@@ -26,11 +26,11 @@ export const SideMenuBar = ({ open, setOpen }) => {
         <a href="#" className="flex items-center gap-2">
           <PiCat className="text-3xl" />
 
-          <span className="text-3xl font-semibold">monstercat</span>
+          <span className="text-3xl font-medium">monstercat</span>
         </a>
 
         <IoMdClose
-          className="text-2xl cursor-pointer"
+          className="text-3xl cursor-pointer"
           onClick={() => setOpen(false)}
         />
       </div>

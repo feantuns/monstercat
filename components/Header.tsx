@@ -1,14 +1,8 @@
 "use client";
 import { useState } from "react";
 import { PiCat } from "react-icons/pi";
-import { PiInstagramLogo } from "react-icons/pi";
-import { FaTiktok } from "react-icons/fa";
-import { PiXLogoLight } from "react-icons/pi";
-import { PiTwitchLogoBold } from "react-icons/pi";
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoDiscord } from "react-icons/io5";
-import { PiPlayCircleFill } from "react-icons/pi";
 import SideMenu, { SideMenuBar } from "./SideMenu";
+import SocialIcons from "./SocialIcons";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -68,30 +62,4 @@ const MobileHeader = ({ handleOpenMenu }) => (
 
     <div className="backdrop-blur-[8px] bg-black/38 absolute top-0 left-0 right-0 w-full h-full z-0"></div>
   </div>
-);
-
-const SocialIcons = () => (
-  <>
-    <a href="#">
-      <PiInstagramLogo className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <FaTiktok className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <PiXLogoLight className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <PiTwitchLogoBold className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <FaFacebook className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <IoLogoDiscord className="text-[1.2rem]" />
-    </a>
-    <a href="#">
-      <PiPlayCircleFill className="text-[1.2rem]" />
-    </a>
-  </>
 );

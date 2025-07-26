@@ -4,6 +4,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 import clsx from "clsx";
 import { IoMdClose } from "react-icons/io";
 import { useEffect, useState } from "react";
+import LinkTitle from "./LinkTitle";
+import SocialIcons from "./SocialIcons";
+import Button from "./Button";
 
 const SideMenu = props => {
   return (
@@ -41,17 +44,47 @@ export const SideMenuBar = ({ open, setOpen }) => {
           localOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
-            <PiCat className="text-3xl" />
+        <div className="flex flex-col h-full">
+          <div className="flex items-center justify-between">
+            <a href="#" className="flex items-center gap-2">
+              <PiCat className="text-3xl" />
 
-            <span className="text-3xl font-medium">monstercat</span>
-          </a>
+              <span className="text-3xl font-medium">monstercat</span>
+            </a>
 
-          <IoMdClose
-            className="text-3xl cursor-pointer"
-            onClick={() => setLocalOpen(false)}
-          />
+            <IoMdClose
+              className="text-3xl cursor-pointer"
+              onClick={() => setLocalOpen(false)}
+            />
+          </div>
+
+          <div className="flex-1 overflow-auto flex flex-col gap-6 my-8 py-8">
+            <MenuLink href="#">About Monstercat</MenuLink>
+            <MenuLink href="#">Contact us</MenuLink>
+            <MenuLink href="#">Carreers</MenuLink>
+            <MenuLink href="#">News</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Press</MenuLink>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="flex gap-4 items-center">
+              <SocialIcons />
+            </div>
+
+            <div className="flex gap-4">
+              <Button variant="outlined">SIGN IN</Button>
+              <Button variant="text" hoverEffect={false}>
+                <span className="pointer-events-none cursor-none">OR</span>SIGN
+                UP
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -59,3 +92,13 @@ export const SideMenuBar = ({ open, setOpen }) => {
 };
 
 export default SideMenu;
+
+const MenuLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+  <a
+    {...props}
+    className={clsx(
+      "text-lg md:text-xl text-white block uppercase font-medium tracking-[2px]",
+      props.className
+    )}
+  />
+);

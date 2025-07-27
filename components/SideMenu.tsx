@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import { useEffect, useState } from "react";
 import LinkTitle from "./LinkTitle";
 import SocialIcons from "./SocialIcons";
-import Button from "./Button";
+import Button, { defaultFontButtonStyles } from "./Button";
 
 const SideMenu = props => {
   return (
@@ -77,11 +77,29 @@ export const SideMenuBar = ({ open, setOpen }) => {
               <SocialIcons />
             </div>
 
-            <div className="flex gap-4">
-              <Button variant="outlined">SIGN IN</Button>
-              <Button variant="text" disableHoverEffect>
-                <span className="pointer-events-none cursor-none">OR</span>SIGN
-                UP
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outlined"
+                size="small"
+                style={{ marginRight: "8px" }}
+              >
+                SIGN IN
+              </Button>
+              <span
+                className={clsx(
+                  defaultFontButtonStyles,
+                  "text-sm md:text-base"
+                )}
+              >
+                OR
+              </span>
+              <Button
+                variant="text"
+                size="small"
+                disableHoverEffect
+                style={{ paddingLeft: 0 }}
+              >
+                SIGN UP
               </Button>
             </div>
           </div>

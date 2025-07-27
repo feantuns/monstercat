@@ -79,7 +79,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
 
             <div className="flex gap-4">
               <Button variant="outlined">SIGN IN</Button>
-              <Button variant="text" hoverEffect={false}>
+              <Button variant="text" disableHoverEffect>
                 <span className="pointer-events-none cursor-none">OR</span>SIGN
                 UP
               </Button>

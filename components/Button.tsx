@@ -7,7 +7,7 @@ const buttonStyles = {
 };
 
 const buttonSizes = {
-  small: `pl-5 pr-5 py-1 text-sm md:text-base`,
+  small: `pl-5 pr-5 py-1 text-base`,
   medium: `pl-6 pr-7 py-2 md:pl-7 md:pr-8 md:py-3 text-base md:text-xl`,
 };
 

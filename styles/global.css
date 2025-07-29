@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin 'tailwind-scrollbar';
+
 @theme {
   --breakpoint-lg: 74.0625rem; /* 1185px / 16 = 74.0625rem */
 }

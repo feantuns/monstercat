@@ -58,7 +58,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
             />
           </div>
 
-          <div className="flex-1 overflow-y-scroll flex flex-col gap-6 my-8 py-0 md:py-8 scrollbar scrollbar-thumb-sky-700 scrollbar-track-sky-300">
+          <div className="flex-1 overflow-y-scroll flex flex-col gap-6 my-8 py-0 md:py-8">
             <MenuLink href="#">About Monstercat</MenuLink>
             <MenuLink href="#">Contact us</MenuLink>
             <MenuLink href="#">Carreers</MenuLink>

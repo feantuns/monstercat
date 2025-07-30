@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@plugin 'tailwind-scrollbar';
-
 @theme {
   --breakpoint-lg: 74.0625rem; /* 1185px / 16 = 74.0625rem */
 }
@@ -14,6 +12,28 @@
     background-attachment: scroll;
     background-color: var(--color-black);
     overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border: 0;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(19, 17, 18, 0.3);
+    border: 0;
+    border-radius: 0px;
   }
 }
 

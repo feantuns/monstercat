@@ -58,18 +58,19 @@ export const SideMenuBar = ({ open, setOpen }) => {
             />
           </div>
 
-          <div className="flex-1 overflow-y-scroll flex flex-col gap-6 my-8 py-0 md:py-8">
-            <MenuLink href="#">About Monstercat</MenuLink>
-            <MenuLink href="#">Contact us</MenuLink>
-            <MenuLink href="#">Carreers</MenuLink>
+          <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8">
+            <MenuLink href="#">Music</MenuLink>
+            <MenuLink href="#">Artists</MenuLink>
+            <MenuLink href="#">About</MenuLink>
             <MenuLink href="#">News</MenuLink>
+            <MenuLink href="#">Events</MenuLink>
+            <MenuLink href="#">Programming</MenuLink>
+            <MenuLink href="#">Gold</MenuLink>
+            <MenuLink href="#">Partners</MenuLink>
             <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
-            <MenuLink href="#">Press</MenuLink>
+            <MenuLink href="#">Player</MenuLink>
+            <MenuLink href="#">Shop</MenuLink>
+            <MenuLink href="#">Lost Civilization</MenuLink>
           </div>
 
           <div className="flex flex-col gap-6">

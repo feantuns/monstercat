@@ -4,7 +4,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import clsx from "clsx";
 import { IoMdClose } from "react-icons/io";
 import { useEffect, useState } from "react";
-import LinkTitle from "./LinkTitle";
 import SocialIcons from "./SocialIcons";
 import Button, { defaultFontButtonStyles } from "./Button";
 
@@ -59,7 +58,14 @@ export const SideMenuBar = ({ open, setOpen }) => {
           </div>
 
           <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8">
-            <MenuLink href="#">Music</MenuLink>
+            <MenuLink
+              subLinks={[
+                { href: "#", children: "Sub Link 1" },
+                { href: "#", children: "Sub Link 2" },
+              ]}
+            >
+              Music
+            </MenuLink>
             <MenuLink href="#">Artists</MenuLink>
             <MenuLink href="#">About</MenuLink>
             <MenuLink href="#">News</MenuLink>
@@ -112,12 +118,34 @@ export const SideMenuBar = ({ open, setOpen }) => {
 
 export default SideMenu;
 
-const MenuLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <a
-    {...props}
-    className={clsx(
-      "text-lg md:text-xl text-white block uppercase font-medium tracking-[2px]",
-      props.className
-    )}
-  />
-);
+const defaultLinkStyles =
+  "text-lg md:text-xl cursor-pointer select-none text-white block uppercase font-medium tracking-[2px]";
+
+const MenuLink = ({
+  subLinks,
+  children,
+  ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & { subLinks?: any[] }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSubLinks = () => setIsOpen(prev => !prev);
+
+  return (
+    <>
+      <a
+        {...props}
+        className={clsx(defaultLinkStyles, props.className)}
+        onClick={subLinks?.length ? toggleSubLinks : undefined}
+      >
+        {children} {subLinks?.length ? (isOpen ? "^" : ">") : ""}
+      </a>
+      {isOpen && subLinks && (
+        <div className="pl-4">
+          {subLinks.map(subLink => (
+            <MenuLink key={subLink.href} {...subLink} />
+          ))}
+        </div>
+      )}
+    </>
+  );
+};

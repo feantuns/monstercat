@@ -3,6 +3,7 @@ import { PiCat } from "react-icons/pi";
 import { AiOutlineMenu } from "react-icons/ai";
 import clsx from "clsx";
 import { IoMdClose } from "react-icons/io";
+import { GoChevronRight } from "react-icons/go";
 import { useEffect, useState } from "react";
 import SocialIcons from "./SocialIcons";
 import Button, { defaultFontButtonStyles } from "./Button";
@@ -137,7 +138,14 @@ const MenuLink = ({
         className={clsx(defaultLinkStyles, props.className)}
         onClick={subLinks?.length ? toggleSubLinks : undefined}
       >
-        {children} {subLinks?.length ? (isOpen ? "^" : ">") : ""}
+        {children}{" "}
+        {subLinks?.length ? (
+          <GoChevronRight
+            className={clsx(isOpen ? "rotate-90" : "", "inline mt-[-2px]")}
+          />
+        ) : (
+          ""
+        )}
       </a>
       {isOpen && subLinks && (
         <div className="pl-4">

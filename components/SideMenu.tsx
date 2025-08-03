@@ -135,7 +135,7 @@ const MenuLink = ({
     <>
       <a
         {...props}
-        className={clsx(defaultLinkStyles, props.className)}
+        className={clsx(props.className, defaultLinkStyles)}
         onClick={subLinks?.length ? toggleSubLinks : undefined}
       >
         {children}{" "}
@@ -148,9 +148,13 @@ const MenuLink = ({
         )}
       </a>
       {isOpen && subLinks && (
-        <div className="pl-4">
+        <div className="pl-4 flex flex-col gap-5">
           {subLinks.map(subLink => (
-            <MenuLink key={subLink.href} {...subLink} />
+            <MenuLink
+              key={subLink.href}
+              className="text-red hover:text-white"
+              {...subLink}
+            />
           ))}
         </div>
       )}

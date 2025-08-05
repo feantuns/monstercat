@@ -61,8 +61,10 @@ export const SideMenuBar = ({ open, setOpen }) => {
           <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8">
             <MenuLink
               subLinks={[
-                { href: "#", children: "Sub Link 1" },
-                { href: "#", children: "Sub Link 2" },
+                { href: "#", children: "Our music" },
+                { href: "#", children: "Instinct" },
+                { href: "#", children: "Uncaged" },
+                { href: "#", children: "Silk" },
               ]}
             >
               Music
@@ -148,11 +150,11 @@ const MenuLink = ({
         )}
       </a>
       {isOpen && subLinks && (
-        <div className="pl-4 flex flex-col gap-3">
+        <div className="pl-4 flex flex-col gap-2 mt-[-8px]">
           {subLinks.map(subLink => (
             <MenuLink
               key={subLink.children}
-              className="text-base! md:text-lg! text-gray-400! hover:text-white! transition-colors duration-200"
+              className="text-base! md:text-lg! text-[#C4C4C4]! hover:text-white! transition-colors duration-200"
               {...subLink}
             />
           ))}

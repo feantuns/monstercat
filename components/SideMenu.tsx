@@ -122,7 +122,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
 export default SideMenu;
 
 const defaultLinkStyles =
-  "text-lg md:text-xl cursor-pointer select-none text-white block uppercase font-medium tracking-[2px]";
+  "text-lg md:text-xl w-fit cursor-pointer select-none text-white block uppercase font-medium tracking-[2px]";
 
 const MenuLink = ({
   subLinks,

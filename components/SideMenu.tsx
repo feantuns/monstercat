@@ -122,7 +122,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
 export default SideMenu;
 
 const defaultLinkStyles =
-  "text-lg md:text-xl w-fit cursor-pointer select-none text-white block uppercase font-medium tracking-[2px]";
+  "text-lg md:text-xl w-fit cursor-pointer select-none text-white block uppercase font-medium tracking-[1px]";
 
 const MenuLink = ({
   subLinks,
@@ -140,10 +140,14 @@ const MenuLink = ({
         className={clsx(defaultLinkStyles, props.className)}
         onClick={subLinks?.length ? toggleSubLinks : undefined}
       >
-        {children}{" "}
+        {children}
         {subLinks?.length ? (
           <GoChevronRight
-            className={clsx(isOpen ? "rotate-90" : "", "inline mt-[-2px]")}
+            className={clsx(
+              isOpen ? "rotate-90" : "",
+              "inline mt-[-2px]",
+              "text-base ml-2"
+            )}
           />
         ) : (
           ""

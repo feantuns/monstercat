@@ -58,7 +58,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
             />
           </div>
 
-          <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8">
+          <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8 pr-8">
             <MenuLink
               subLinks={[
                 { href: "#", children: "Our music" },
@@ -70,10 +70,40 @@ export const SideMenuBar = ({ open, setOpen }) => {
               Music
             </MenuLink>
             <MenuLink href="#">Artists</MenuLink>
-            <MenuLink href="#">About</MenuLink>
+            <MenuLink
+              href="#"
+              subLinks={[
+                { href: "#", children: "About monstercat" },
+                { href: "#", children: "Diversity & Inclusion" },
+                { href: "#", children: "Code of Ethics" },
+                { href: "#", children: "Environmental" },
+                { href: "#", children: "Contact Us" },
+                { href: "#", children: "Careers" },
+              ]}
+            >
+              About
+            </MenuLink>
             <MenuLink href="#">News</MenuLink>
-            <MenuLink href="#">Events</MenuLink>
-            <MenuLink href="#">Programming</MenuLink>
+            <MenuLink
+              href="#"
+              subLinks={[
+                { href: "#", children: "Monstercat Events Experience" },
+                { href: "#", children: "Upcoming Events" },
+              ]}
+            >
+              Events
+            </MenuLink>
+            <MenuLink
+              href="#"
+              subLinks={[
+                { href: "#", children: "MonstercatTV" },
+                { href: "#", children: "Call of The Wild" },
+                { href: "#", children: "Silk Showcase" },
+                { href: "#", children: "Upcoming Shows" },
+              ]}
+            >
+              Programming
+            </MenuLink>
             <MenuLink href="#">Gold</MenuLink>
             <MenuLink href="#">Partners</MenuLink>
             <MenuLink href="#">Press</MenuLink>

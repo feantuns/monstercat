@@ -87,7 +87,11 @@ export const SideMenuBar = ({ open, setOpen }) => {
             <MenuLink
               href="#"
               subLinks={[
-                { href: "#", children: "Monstercat Events Experience" },
+                {
+                  href: "#",
+                  children: "Monstercat Events Experience",
+                  style: { lineHeight: "18px" },
+                },
                 { href: "#", children: "Upcoming Events" },
               ]}
             >

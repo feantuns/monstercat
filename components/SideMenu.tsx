@@ -90,7 +90,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
                 {
                   href: "#",
                   children: "Monstercat Events Experience",
-                  style: { lineHeight: "18px" },
+                  className: `${sublinkStyles} leading-[18px]!`,
                 },
                 { href: "#", children: "Upcoming Events" },
               ]}
@@ -158,6 +158,9 @@ export default SideMenu;
 const defaultLinkStyles =
   "text-lg md:text-xl w-fit cursor-pointer select-none text-white block uppercase font-medium tracking-[1px]";
 
+const sublinkStyles =
+  "text-base! md:text-lg! text-[#C4C4C4]! hover:text-white! transition-colors duration-200";
+
 const MenuLink = ({
   subLinks,
   children,
@@ -192,7 +195,7 @@ const MenuLink = ({
           {subLinks.map(subLink => (
             <MenuLink
               key={subLink.children}
-              className="text-base! md:text-lg! text-[#C4C4C4]! hover:text-white! transition-colors duration-200"
+              className={subLink.className || sublinkStyles}
               {...subLink}
             />
           ))}

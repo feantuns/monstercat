@@ -60,7 +60,6 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
           npm run build
-          npm run export # generates the `out` folder
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

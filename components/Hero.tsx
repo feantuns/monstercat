@@ -26,7 +26,7 @@ const Hero = ({
 
   return (
     <Container>
-      <div className="min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-25 pb-24 lg:pb-0">
+      <div className="lg:min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-25 pb-24 lg:pb-0">
         {/* <div className="flex-col-reverse  md:flex-row lg:w-auto flex gap-2">
           <div className="hidden md:flex">
             <ReleaseDate album={album} formattedDate={formattedDate} sideways />

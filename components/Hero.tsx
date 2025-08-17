@@ -6,6 +6,7 @@ import { useAudio } from "../hooks/useAudio";
 import PlayPauseIcon from "./PlayPauseIcon";
 import { share } from "../utils/share";
 import clsx from "clsx";
+import MusicArtwork from "./ui/music-artwork";
 
 const Hero = ({
   album,
@@ -26,7 +27,7 @@ const Hero = ({
   return (
     <Container>
       <div className="min-h-[90vh] lg:px-0 flex flex-col lg:flex-row items-start lg:items-center gap-12 pt-25 pb-24 lg:pb-0">
-        <div className="flex-col-reverse  md:flex-row lg:w-auto flex gap-2">
+        {/* <div className="flex-col-reverse  md:flex-row lg:w-auto flex gap-2">
           <div className="hidden md:flex">
             <ReleaseDate album={album} formattedDate={formattedDate} sideways />
           </div>
@@ -37,6 +38,18 @@ const Hero = ({
             src={album.images[0].url}
             alt={album.name}
             className="w-full lg:w-[clamp(350px,30vw,500px)]"
+          />
+        </div> */}
+        <div className="flex justify-center w-full lg:w-[clamp(350px,30vw,500px)]">
+          <MusicArtwork
+            artist={album.artists[0].name}
+            music={firstTrack.name}
+            albumArt={album.images[0].url}
+            isSong={true}
+            isLoading={audioHook.loadingTrack}
+            onPlayPause={() =>
+              audioHook.handleClickPlay({ track: firstTrack, isPlaying })
+            }
           />
         </div>
         <div>

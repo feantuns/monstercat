@@ -171,12 +171,13 @@ export default function MusicArtwork({
               }}
             >
               <Image
-                src="https://pngimg.com/d/vinyl_PNG95.png"
+                src="/monstercat/vinil.avif"
                 alt="Vinyl Record"
                 width={80}
                 height={80}
                 className="w-full h-full object-contain"
                 unoptimized
+                loading="lazy"
               />
             </div>
           </div>

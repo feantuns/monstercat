@@ -204,6 +204,7 @@ export default function MusicArtwork({
               setImageLoaded(true);
             }}
             unoptimized
+            priority
           />
 
           {/* Loading state overlay */}

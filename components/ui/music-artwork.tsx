@@ -203,8 +203,8 @@ export default function MusicArtwork({
               // Handle error with fallback image
               setImageLoaded(true);
             }}
-            unoptimized
             priority
+            fetchPriority="high"
           />
 
           {/* Loading state overlay */}

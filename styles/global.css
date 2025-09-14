@@ -5,6 +5,10 @@
 }
 
 @layer base {
+  :root {
+    --font-fallback: Arial, sans-serif;
+  }
+
   body {
     color: #f1f1f1;
     background-image: url(https://cdn.monstercat.com/background-tile.webp);
@@ -12,6 +16,13 @@
     background-attachment: scroll;
     background-color: var(--color-black);
     overflow-x: hidden;
+    font-family: var(--font-kanit), var(--font-fallback);
+
+    /* Metric overrides to avoid CLS */
+    font-size-adjust: 0.53;
+    ascent-override: 92%;
+    descent-override: 21%;
+    line-gap-override: 0%;
   }
 
   /* Scrollbar styles */

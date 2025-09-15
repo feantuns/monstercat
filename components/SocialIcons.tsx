@@ -8,25 +8,25 @@ import { PiPlayCircleFill } from "react-icons/pi";
 
 const SocialIcons = () => (
   <>
-    <a href="#">
+    <a title="Instagram" href="#">
       <PiInstagramLogo className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="TikTok" href="#">
       <FaTiktok className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="SoundCloud" href="#">
       <PiXLogoLight className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="Twitch" href="#">
       <PiTwitchLogoBold className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="Facebook" href="#">
       <FaFacebook className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="Discord" href="#">
       <IoLogoDiscord className="text-[1.2rem]" />
     </a>
-    <a href="#">
+    <a title="Monstercat Player" href="#">
       <PiPlayCircleFill className="text-[1.2rem]" />
     </a>
   </>

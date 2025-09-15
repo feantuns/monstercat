@@ -7,6 +7,7 @@ const LinkTitle = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
       "text-lg md:text-2xl text-white block uppercase font-medium tracking-[2px]",
       props.className
     )}
+    title={typeof props.children === "string" ? props.children : undefined}
   />
 );
 

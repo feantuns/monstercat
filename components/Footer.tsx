@@ -47,34 +47,34 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-wrap gap-5 items-center">
-            <a href="#">
+            <a title="YouTube" href="#">
               <FaYoutube className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Instagram" href="#">
               <PiInstagramLogo className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="TikTok" href="#">
               <FaTiktok className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="SoundCloud" href="#">
               <PiXLogoLight className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Bandcamp" href="#">
               <FaSpotify className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Apple Music" href="#">
               <FaApple className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Twitch" href="#">
               <PiTwitchLogoBold className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Facebook" href="#">
               <FaFacebook className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Discord" href="#">
               <IoLogoDiscord className="text-[1.2rem]" />
             </a>
-            <a href="#">
+            <a title="Monstercat Player" href="#">
               <PiPlayCircleFill className="text-[1.2rem]" />
             </a>
           </div>
@@ -105,6 +105,7 @@ const EmailField = () => {
       <Button
         variant="text"
         style={{ position: "absolute", right: 0, top: 8, padding: "8px 20px" }}
+        aria-label="Subscribe to newsletter"
       >
         <LiaLongArrowAltRightSolid />
       </Button>

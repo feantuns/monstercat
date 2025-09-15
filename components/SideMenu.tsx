@@ -12,6 +12,7 @@ const SideMenu = props => {
   return (
     <AiOutlineMenu
       className="text-2xl cursor-pointer relative z-1"
+      title="Open menu"
       {...props}
     />
   );
@@ -176,6 +177,7 @@ const MenuLink = ({
         {...props}
         className={clsx(defaultLinkStyles, props.className)}
         onClick={subLinks?.length ? toggleSubLinks : undefined}
+        title={typeof children === "string" ? children : undefined}
       >
         {children}
         {subLinks?.length ? (

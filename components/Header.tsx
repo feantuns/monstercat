@@ -31,7 +31,7 @@ export default Header;
 const DesktopHeader = ({ handleOpenMenu }) => (
   <div className="px-[32px] pt-6 flex items-start w-full max-w-[1260px] mx-auto justify-between">
     <div className="p-4 bg-black">
-      <a href="#">
+      <a title="Go to home" href="#">
         <PiCat className="text-3xl" />
       </a>
     </div>
@@ -49,7 +49,7 @@ const DesktopHeader = ({ handleOpenMenu }) => (
 const MobileHeader = ({ handleOpenMenu }) => (
   <div className="bg-black/38 relative px-4 py-2 flex items-center justify-between w-full max-w-[1260px] mx-auto">
     <div className="p-2 bg-black relative z-1">
-      <a href="#">
+      <a title="Go to home" href="#">
         <PiCat className="text-2xl sm:text-3xl" />
       </a>
     </div>

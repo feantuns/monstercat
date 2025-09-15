@@ -61,6 +61,7 @@ export const SideMenuBar = ({ open, setOpen }) => {
 
           <div className="flex-1 overflow-y-scroll flex flex-col gap-5 my-8 py-0 md:py-8 pr-8">
             <MenuLink
+              href="#"
               subLinks={[
                 { href: "#", children: "Our music" },
                 { href: "#", children: "Instinct" },
